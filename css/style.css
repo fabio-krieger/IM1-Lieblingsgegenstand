@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "KronaOne";
+    src:
+            local("KronaOne"),
+            url("../fonts/KronaOne-Regular.woff");
+}
+
+:root {
+    --color-primary: #F05B1B;
+    --color-text: #1A1817;
+    --color-text-secondary: #73452E;
+    --color-surface: #F4F6F0;
+    --color-background: #EBE7E6;
+    --color-border: #D6CFCB;
+    --global-max-width: 1200px;
+}
+
+[data-theme="dark"] {
+    --color-primary: #F05B1B;
+    --color-text: #F4F6F0;
+    --color-text-secondary: #EBE7E6;
+    --color-surface: #242621;
+    --color-background: #1A1817;
+    --color-border: #73452E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background-color: var(--color-background);
+}
