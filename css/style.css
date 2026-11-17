@@ -1,8 +1,13 @@
 @font-face {
-    font-family: "KronaOne";
+    font-family: "Krona One";
     src:
-            local("KronaOne"),
+            local("Krona One"),
             url("../fonts/KronaOne-Regular.woff");
+
+    font-family: "Inter";
+    src:
+            local("Inter"),
+            url("../fonts/Inter-VariableFont_opsz_wght.woff");
 }
 
 :root {
@@ -13,6 +18,10 @@
     --color-background: #EBE7E6;
     --color-border: #D6CFCB;
     --global-max-width: 1200px;
+    --font-size-small: 0.8rem;
+    --font-size-regular: 1rem;
+    --font-size-medium: 2rem;
+    --font-size-large: 10rem;
 }
 
 [data-theme="dark"] {
@@ -28,8 +37,93 @@
     margin: 0;
     padding: 0;
     font-family: "Inter", sans-serif;
+    color: var(--color-text);
 }
 
 body {
     background-color: var(--color-background);
+}
+
+section {
+    max-width: var(--global-max-width);
+    margin: auto;
+
+    &.header-section {
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 0;
+        text-transform: uppercase;
+        font-size: var(--font-size-small);
+
+        .header-title {
+            display: flex;
+            align-items: center;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            gap: 5rem;
+
+            li {
+                display: flex;
+                align-items: center;
+
+                a {
+                    padding: 0.5rem 0;
+                    text-decoration: none;
+                    color: var(--color-text);
+
+                    &.active {
+                        color: var(--color-primary);
+                    }
+                }
+            }
+        }
+    }
+
+    &.main-section {
+
+        h1 {
+            font-size: var(--font-size-large);
+            font-family: "Krona One";
+            text-transform: uppercase;
+        }
+
+        .img-wrapper {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+
+            img {
+                filter: grayscale(100%);
+                border-top: 4px solid var(--color-primary);
+            }
+        }
+    }
+
+    &.footer-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-transform: uppercase;
+        padding: 2rem 0;
+        border-top: 1px solid var(--color-border);
+        font-size: var(--font-size-small);
+
+        #theme-toggle {
+            padding: .5rem;
+            border-radius: 2rem;
+            border: none;
+            background-color: var(--color-primary);
+            color: var(--color-background);
+            text-transform: uppercase;
+            font-size: var(--font-size-small);
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
 }
