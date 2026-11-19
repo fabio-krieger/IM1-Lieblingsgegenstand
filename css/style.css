@@ -236,9 +236,19 @@ section {
             border-radius: 2rem;
             border: none;
             background-color: var(--color-primary);
-            color: var(--color-background);
             text-transform: uppercase;
             font-size: var(--font-size-small);
+            display: flex;
+            gap: 5px;
+
+            span {
+                color: var(--color-background);
+            }
+
+            img {
+                height: 15px;
+                width: 15px;
+            }
         }
 
         a {
