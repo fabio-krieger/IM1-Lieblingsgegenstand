@@ -1,8 +1,3 @@
-// Gibt "Test" in der Browser-Konsole aus.
-// Damit kannst du prüfen, ob die JavaScript-Datei überhaupt geladen wird.
-console.log("Test");
-
-
 // Wartet, bis das HTML der Seite vollständig geladen wurde.
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -76,5 +71,4 @@ document.addEventListener("DOMContentLoaded", () => {
         : "img/icon-lightmode.svg";
 
   });
-
 });
