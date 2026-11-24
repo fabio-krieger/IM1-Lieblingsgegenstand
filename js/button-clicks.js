@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const infoboxtitle = document.querySelector("#info-title");
     const infoboxtext = document.querySelector("#info-text");
 
-    const defaulttitle = "Ein Schlüsselbund.<br>Immer dabei.";
-    const defaulttext = "Klicke auf die Knöpfe am Objekt.";
+    const defaultTitle = "Ein Schlüsselbund.<br>Immer dabei.";
+    const defaultText = "Klicke auf die Knöpfe am Objekt.";
 
     const content = {
         karabiner: {
@@ -41,17 +41,17 @@ document.addEventListener("DOMContentLoaded", () => {
         // Wenn der geklickte Button bereits aktiv war:
         // zurück zum Default
         if (isActive) {
-            infoboxtitle.textContent = defaultTitle;
+            infoboxtitle.innerHTML = defaultTitle;
             infoboxtext.textContent = defaultText;
             return;
+        } else {
+            // Neuen Button aktivieren
+            button.classList.add("active");
+
+            // Inhalt anpassen
+            infoboxtitle.textContent = data.title;
+            infoboxtext.textContent = data.text;
         }
-
-        // Neuen Button aktivieren
-        button.classList.add("active");
-
-        // Inhalt anpassen
-        infoboxtitle.textContent = data.title;
-        infoboxtext.textContent = data.text;
     }
 
     karabiner.addEventListener("click", () => {

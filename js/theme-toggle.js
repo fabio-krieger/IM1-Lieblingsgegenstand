@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Sucht innerhalb des Buttons nach dem <span>-Element.
   const text = toggle.querySelector("span");
 
-
   // Holt das zuletzt gespeicherte Theme aus dem localStorage.
   // Falls noch nichts gespeichert wurde, wird "light" verwendet.
   const saved = localStorage.getItem("theme") || "light";
